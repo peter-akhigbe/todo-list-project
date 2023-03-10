@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: large;
+}
+
+body {
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.todo {
+  border: 1px solid blue;
+  padding: 20px;
+  color: grey;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h2 {
+  margin: auto;
+}
