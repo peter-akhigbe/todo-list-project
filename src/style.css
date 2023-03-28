@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(234, 232, 230);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.todo {
+  width: 50vw;
+  color: grey;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  padding: 15px 10px;
+  font-size: larger;
+}
+
+h2 {
+  font-size: small;
+  padding: 10px 10px;
+  background-color: rgb(210, 208, 204);
+  width: 100%;
+  text-align: center;
+}
+
+input {
+  border: none;
+  padding: 10px 10px;
+  font-size: large;
+}
+
+ul li {
+  padding: 10px 10px;
+  display: flex;
+  gap: 20px;
+}
+
+input:focus {
+  outline: none;
+}
