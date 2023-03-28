@@ -47,13 +47,15 @@ A simple Todo-List project.
   </ul>
 </details>
 
-<!-- LIVE DEMO -->
+<!-- LIVE DEMO 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://peter-akhigbe.github.io/todo-list-project/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+-->
 
 <!-- GETTING STARTED -->
 
@@ -63,7 +65,7 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need: N/A
+In order to run this project you need: Node.js
 
 ### Setup
 
@@ -75,7 +77,7 @@ Install this project with: npm install
 
 ### Usage
 
-To run the project, execute the following command: nmp start
+To run the project, execute the following command: npm start
 
 ### Run tests
 
