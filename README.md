@@ -1,3 +1,5 @@
+<a name="readme-top"></a>
+
 <div align="center">
   <h1>Todo-List Project</h1>
 </div>
@@ -6,17 +8,25 @@
 
 ## 📗 Table of Contents
 
+
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
   - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -51,9 +61,29 @@ A simple Todo-List project.
 
 To get a local copy up and running, follow these steps.
 
+### Prerequisites
+
+In order to run this project you need: N/A
+
 ### Setup
 
-Clone this repository to your desired folder: https://github.com/peter-akhigbe/todo-list-project/
+Clone this repository to your desired folder: git clone https://github.com/peter-akhigbe/todo-list-project/
+
+### Install
+
+Install this project with: npm install
+
+### Usage
+
+To run the project, execute the following command: nmp start
+
+### Run tests
+
+To run tests, run the following command: N/A
+
+### Deployment
+
+You can deploy this project using: N/A
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
