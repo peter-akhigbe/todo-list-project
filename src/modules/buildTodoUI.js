@@ -1,5 +1,6 @@
+/* eslint-disable import/no-cycle */
 import { forEach } from 'lodash';
-import { todoListArray } from './todoListArray.js';
+import { todoListArray } from '../script.js';
 import updateArrIndex from './updateArrayIndex.js';
 
 const buildTodoUI = () => {

@@ -1,6 +1,5 @@
 /* eslint-disable import/no-cycle */
-import { todoListArray } from './todoListArray.js';
-import allFuncs from '../script.js';
+import { todoListArray, allFuncs } from '../script.js';
 
 const clearAllCompleted = () => {
   const checker = () => {
@@ -28,6 +27,7 @@ const clearAllCompleted = () => {
         }
       }
       allFuncs();
+      console.log(todoListArray);
     });
   };
 

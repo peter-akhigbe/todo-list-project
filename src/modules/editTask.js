@@ -1,6 +1,6 @@
 /* eslint-disable import/no-cycle */
-import { todoListArray } from './todoListArray.js';
-import allFuncs from '../script.js';
+import { todoListArray, allFuncs } from '../script.js';
+import deleteTask from './deleteTask.js';
 
 const editTask = () => {
   const dots = document.querySelectorAll('.dots');
@@ -10,19 +10,21 @@ const editTask = () => {
       const list = dot.parentNode;
       const label = dot.parentNode.querySelector('label');
       const input = document.createElement('input');
-      input.type = 'text';
-
+      const index = list.id.split('-')[1];
       if (list.children[1].tagName === 'LABEL') {
+        dot.innerHTML = `<span class="delete" id="delete-${index}">🗑️</span>`;
+        dot.style.transform = 'rotate(0deg)';
+        input.type = 'text';
         list.replaceChild(input, label);
         input.value = label.textContent;
-        list.style.backgroundColor = 'grey';
-        input.style.backgroundColor = 'grey';
+        list.style.backgroundColor = 'rgb(242, 236, 192)';
+        input.style.backgroundColor = 'rgb(242, 236, 192)';
         input.focus();
+        deleteTask();
         // starts here
         input.addEventListener('keypress', (e) => {
           if (input.value !== '' && e.key === 'Enter') {
-            const index = list.id.split('-')[1] - 1;
-            todoListArray[index].discription = input.value;
+            todoListArray[index - 1].discription = input.value;
             input.value = '';
             allFuncs();
           }
