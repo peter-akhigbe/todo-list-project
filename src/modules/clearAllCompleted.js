@@ -8,10 +8,13 @@ const clearAllCompleted = () => {
     if (checkboxes) {
       checkboxes.forEach((checkbox, i) => {
         checkbox.addEventListener('change', (e) => {
+          const taskText = checkbox.parentElement.querySelector('label');
           if (e.target.checked) {
             todoListArray[i].completed = true;
+            taskText.style['text-decoration'] = 'line-through';
           } else {
             todoListArray[i].completed = false;
+            taskText.style['text-decoration'] = 'none';
           }
         });
       });
@@ -27,7 +30,6 @@ const clearAllCompleted = () => {
         }
       }
       allFuncs();
-      console.log(todoListArray);
     });
   };
 
