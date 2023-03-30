@@ -32,12 +32,21 @@ h2 {
   background-color: rgb(210, 208, 204);
   width: 100%;
   text-align: center;
+  cursor: pointer;
 }
 
 input {
   border: none;
+}
+
+#type-here {
+  border: none;
   padding: 10px 10px;
   font-size: large;
+}
+
+input:focus {
+  outline: none;
 }
 
 ul li {
@@ -46,6 +55,9 @@ ul li {
   gap: 20px;
 }
 
-input:focus {
-  outline: none;
+.dots {
+  font-weight: 900;
+  transform: rotate(90deg);
+  margin-left: auto;
+  cursor: pointer;
 }
