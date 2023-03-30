@@ -1,5 +1,6 @@
-import { todoListArray, saveList } from './todoListArray.js';
-import buildTodoUI from './buildTodoUI.js';
+/* eslint-disable import/no-cycle */
+import { todoListArray } from './todoListArray.js';
+import allFuncs from '../script.js';
 
 const clearAllCompleted = () => {
   const checker = () => {
@@ -26,9 +27,7 @@ const clearAllCompleted = () => {
           todoListArray.splice(i, 1);
         }
       }
-      buildTodoUI();
-      checker();
-      saveList();
+      allFuncs();
     });
   };
 

@@ -1,6 +1,6 @@
-import buildTodoUI from './buildTodoUI.js';
-import { saveList, todoListArray } from './todoListArray.js';
-import clearAllCompleted from './clearAllCompleted.js';
+/* eslint-disable import/no-cycle */
+import { todoListArray } from './todoListArray.js';
+import allFuncs from '../script.js';
 
 const addTaskFunc = (index, completed = false, discription) => {
   const input = document.querySelector('#type-here');
@@ -9,10 +9,8 @@ const addTaskFunc = (index, completed = false, discription) => {
       discription = input.value;
       index = todoListArray.length + 1;
       todoListArray.push({ index, completed, discription });
-      buildTodoUI();
-      clearAllCompleted();
-      saveList();
       input.value = '';
+      allFuncs();
     }
   });
 };

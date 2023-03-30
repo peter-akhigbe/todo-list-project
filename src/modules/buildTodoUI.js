@@ -9,9 +9,10 @@ const buildTodoUI = () => {
 
   forEach(todoListArray, (todo) => {
     listUI.innerHTML += `
-    <li>
-      <input class="task" type="checkbox" id="item-${todo.index}" name="item-${todo.index}">
+    <li class="list" id="list-${todo.index}">
+      <input class="task" id="item-${todo.index}" type="checkbox" name="item-${todo.index}">
       <label for="item-${todo.index}">${todo.discription}</label>
+      <span class="dots" id="dot-${todo.index}">...</span>
     </li>
     <hr>
   `;
