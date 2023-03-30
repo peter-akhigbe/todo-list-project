@@ -1,14 +1,17 @@
 import { forEach } from 'lodash';
-import todoArr from './todoArr.js';
+import { todoListArray } from './todoListArray.js';
+import updateArrIndex from './updateArrayIndex.js';
 
 const buildTodoUI = () => {
+  updateArrIndex();
   const listUI = document.querySelector('.lists');
+  listUI.innerHTML = '';
 
-  forEach(todoArr, (todo, i) => {
+  forEach(todoListArray, (todo) => {
     listUI.innerHTML += `
     <li>
-      <input type="checkbox" id="item-${i}" name="item-${i}">
-      <label for="item-${i}">${todo.discription}</label>
+      <input class="task" type="checkbox" id="item-${todo.index}" name="item-${todo.index}">
+      <label for="item-${todo.index}">${todo.discription}</label>
     </li>
     <hr>
   `;
