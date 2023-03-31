@@ -42,10 +42,20 @@ A simple Todo-List project.
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="">HTML & CSS</a></li>
-    <li><a href="">JavaScript</a></li>
+    <li>HTML/CSS</li>
+    <li>JavaScript</li>
   </ul>
 </details>
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+- **Todo-List: Add & Remove**
+- **LocalStorage**
+- **WebPack**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO 
 
@@ -105,9 +115,9 @@ You can deploy this project using: N/A
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **A page body**
-- [ ] **More CSS styles**
-- [ ] **JavaScript functionalties**
+- [ ] **Backend**
+- [ ] **DataBase**
+- [ ] **API**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

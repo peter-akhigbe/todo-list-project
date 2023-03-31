@@ -10,7 +10,6 @@ const addTaskFunc = (index, completed = false, discription) => {
       todoListArray.push({ index, completed, discription });
       input.value = '';
       allFuncs();
-      console.log(todoListArray);
     }
   });
 };
