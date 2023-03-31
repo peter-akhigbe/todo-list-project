@@ -42,8 +42,8 @@ A simple Todo-List project.
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="">HTML & CSS</a></li>
-    <li><a href="">JavaScript</a></li>
+    <li>HTML/CSS</li>
+    <li>JavaScript</li>
   </ul>
 </details>
 
