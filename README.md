@@ -57,15 +57,13 @@ A simple Todo-List project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO 
+<!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://peter-akhigbe.github.io/todo-list-project/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
--->
 
 <!-- GETTING STARTED -->
 
