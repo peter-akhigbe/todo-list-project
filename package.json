@@ -90,10 +90,10 @@
     "fresh": "^0.5.2",
     "fs-monkey": "^1.0.3",
     "fs.realpath": "^1.0.0",
-    "fsevents": "^2.3.2",
     "function-bind": "^1.1.1",
     "get-intrinsic": "^1.2.0",
     "get-stream": "^6.0.1",
+    "gh-pages": "^5.0.0",
     "glob": "^7.2.3",
     "glob-parent": "^5.1.2",
     "glob-to-regexp": "^0.4.1",
@@ -291,12 +291,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "deploy":  "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "optionalDependencies": {
     "fsevents": "*"
-  }
+  },
+  "homepage": "https://peter-akhigbe.github.io/todo-list-project"
 }
