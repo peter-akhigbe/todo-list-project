@@ -1,10 +1,6 @@
-/* eslint-disable import/no-cycle */
-import { forEach } from 'lodash';
-import { todoListArray, saveList } from '../script.js';
-
-const buildTodoUI = () => {
+const buildTodoUI = (obj) => {
   const updateArrIndex = () => {
-    todoListArray.forEach((todo, i) => {
+    obj.todoListArray.forEach((todo, i) => {
       todo.index = i + 1;
     });
   };
@@ -14,7 +10,7 @@ const buildTodoUI = () => {
   const listUI = document.querySelector('.lists');
   listUI.innerHTML = '';
 
-  forEach(todoListArray, (todo) => {
+  obj.todoListArray.forEach((todo) => {
     const tick = todo.completed === true ? 'checked' : '';
     listUI.innerHTML += `
     <li class="list" id="list-${todo.index}">
@@ -33,7 +29,7 @@ const buildTodoUI = () => {
     }
   });
 
-  saveList();
+  obj.saveList();
 };
 
 export default buildTodoUI;

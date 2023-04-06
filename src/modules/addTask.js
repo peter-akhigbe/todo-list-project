@@ -1,15 +1,16 @@
-/* eslint-disable import/no-cycle */
-import { todoListArray, allFuncs } from '../script.js';
-
-const addTaskFunc = (index, completed = false, discription) => {
+const addTaskFunc = (obj) => {
   const input = document.querySelector('#type-here');
+
   input.addEventListener('keypress', (e) => {
+    const taskObj = {};
+
     if (input.value !== '' && e.key === 'Enter') {
-      discription = input.value;
-      index = todoListArray.length + 1;
-      todoListArray.push({ index, completed, discription });
+      taskObj.index = obj.todoListArray.length + 1;
+      taskObj.completed = false;
+      taskObj.discription = input.value;
+      obj.todoListArray.push({ ...taskObj });
       input.value = '';
-      allFuncs();
+      obj.allFuncs();
     }
   });
 };
