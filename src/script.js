@@ -7,12 +7,11 @@ import deleteTask from './modules/deleteTask.js';
 
 const todoListObj = {
   TODO_KEY: 'todo-list',
+
   todoListArray: JSON.parse(localStorage.getItem('todo-list')) || [],
+
   saveList() {
-    localStorage.setItem(
-      'todo-list',
-      JSON.stringify(todoListObj.todoListArray),
-    );
+    localStorage.setItem('todo-list', JSON.stringify(this.todoListArray));
   },
 
   addTaskFunc, // addTaskFunc function added as method
@@ -36,3 +35,5 @@ const todoListObj = {
 };
 
 todoListObj.allFuncs();
+
+export default todoListObj;
