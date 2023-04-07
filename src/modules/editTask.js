@@ -7,6 +7,8 @@ const editTask = (obj) => {
       const label = dot.parentNode.querySelector('label');
       const input = document.createElement('input');
       const index = list.id.split('-')[1];
+      input.id = `edit-${index}`;
+
       if (list.children[1].tagName === 'LABEL') {
         dot.innerHTML = `<span class="delete" id="delete-${index}">🗑️</span>`;
         dot.style.transform = 'rotate(0deg)';
@@ -17,6 +19,7 @@ const editTask = (obj) => {
         input.style.backgroundColor = 'rgb(242, 236, 192)';
         input.focus();
         obj.deleteTask(obj);
+
         // starts here
         input.addEventListener('keypress', (e) => {
           if (input.value !== '' && e.key === 'Enter') {
