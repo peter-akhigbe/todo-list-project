@@ -1,7 +1,4 @@
-/* eslint-disable import/no-cycle */
-import { todoListArray, allFuncs, saveList } from '../script.js';
-
-const clearAllCompleted = () => {
+const clearAllCompleted = (obj) => {
   const checker = () => {
     const checkboxes = [...document.querySelectorAll('.task')];
 
@@ -10,13 +7,13 @@ const clearAllCompleted = () => {
         checkbox.addEventListener('change', () => {
           const taskText = checkbox.parentElement.querySelector('label');
           if (checkbox.checked === true) {
-            todoListArray[i].completed = true;
+            obj.todoListArray[i].completed = true;
             taskText.style['text-decoration'] = 'line-through';
-            saveList();
+            obj.saveList();
           } else {
-            todoListArray[i].completed = false;
+            obj.todoListArray[i].completed = false;
             taskText.style['text-decoration'] = 'none';
-            saveList();
+            obj.saveList();
           }
         });
       });
@@ -25,14 +22,17 @@ const clearAllCompleted = () => {
 
   const clearing = () => {
     const clearBtn = document.querySelector('h2');
-    clearBtn.addEventListener('click', () => {
-      for (let i = todoListArray.length - 1; i >= 0; i -= 1) {
-        if (todoListArray[i].completed === true) {
-          todoListArray.splice(i, 1);
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        for (let i = obj.todoListArray.length - 1; i >= 0; i -= 1) {
+          if (obj.todoListArray[i].completed === true) {
+            obj.todoListArray.splice(i, 1);
+          }
         }
-      }
-      allFuncs();
-    });
+        obj.allFuncs();
+      });
+    }
   };
 
   checker();

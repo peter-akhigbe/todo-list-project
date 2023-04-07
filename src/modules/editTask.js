@@ -1,8 +1,4 @@
-/* eslint-disable import/no-cycle */
-import { todoListArray, allFuncs } from '../script.js';
-import deleteTask from './deleteTask.js';
-
-const editTask = () => {
+const editTask = (obj) => {
   const dots = document.querySelectorAll('.dots');
 
   dots.forEach((dot) => {
@@ -20,13 +16,13 @@ const editTask = () => {
         list.style.backgroundColor = 'rgb(242, 236, 192)';
         input.style.backgroundColor = 'rgb(242, 236, 192)';
         input.focus();
-        deleteTask();
+        obj.deleteTask(obj);
         // starts here
         input.addEventListener('keypress', (e) => {
           if (input.value !== '' && e.key === 'Enter') {
-            todoListArray[index - 1].discription = input.value;
+            obj.todoListArray[index - 1].discription = input.value;
             input.value = '';
-            allFuncs();
+            obj.allFuncs();
           }
         });
         // ends here
