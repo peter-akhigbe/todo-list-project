@@ -8,11 +8,16 @@ const buildTodoUI = (obj) => {
   updateArrIndex();
 
   const listUI = document.querySelector('.lists');
-  listUI.innerHTML = '';
+
+  if (listUI) {
+    listUI.innerHTML = '';
+  }
 
   obj.todoListArray.forEach((todo) => {
     const tick = todo.completed === true ? 'checked' : '';
-    listUI.innerHTML += `
+
+    if (listUI) {
+      listUI.innerHTML += `
     <li class="list" id="list-${todo.index}">
       <input class="task" id="item-${todo.index}" type="checkbox" ${tick} name="item-${todo.index}">
       <label for="item-${todo.index}" id="label-${todo.index}">${todo.discription}</label>
@@ -20,6 +25,7 @@ const buildTodoUI = (obj) => {
     </li>
     <hr>
   `;
+    }
 
     const input = document.querySelector(`#item-${todo.index}`);
     const label = document.querySelector(`#label-${todo.index}`);

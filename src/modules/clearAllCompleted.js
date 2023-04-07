@@ -22,14 +22,17 @@ const clearAllCompleted = (obj) => {
 
   const clearing = () => {
     const clearBtn = document.querySelector('h2');
-    clearBtn.addEventListener('click', () => {
-      for (let i = obj.todoListArray.length - 1; i >= 0; i -= 1) {
-        if (obj.todoListArray[i].completed === true) {
-          obj.todoListArray.splice(i, 1);
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        for (let i = obj.todoListArray.length - 1; i >= 0; i -= 1) {
+          if (obj.todoListArray[i].completed === true) {
+            obj.todoListArray.splice(i, 1);
+          }
         }
-      }
-      obj.allFuncs();
-    });
+        obj.allFuncs();
+      });
+    }
   };
 
   checker();

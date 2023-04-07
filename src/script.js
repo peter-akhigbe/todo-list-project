@@ -34,6 +34,8 @@ const todoListObj = {
   },
 };
 
-todoListObj.allFuncs();
+document.addEventListener('DOMContentLoaded', () => {
+  todoListObj.allFuncs();
+});
 
 export default todoListObj;
