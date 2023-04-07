@@ -44,6 +44,7 @@ A simple Todo-List project.
   <ul>
     <li>HTML/CSS</li>
     <li>JavaScript</li>
+    <li>Jest</li>
   </ul>
 </details>
 
@@ -54,6 +55,8 @@ A simple Todo-List project.
 - **Todo-List: Add & Remove**
 - **LocalStorage**
 - **WebPack**
+- **Tests with jest**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,6 +109,10 @@ You can deploy this project using: N/A
 - GitHub: [@peter-akhigbe](https://github.com/peter-akhigbe)
 - Twitter: [@peter*akhigbe*](https://twitter.com/peter_akhigbe_)
 - LinkedIn: [peter-akhigbe](https://linkedin.com/in/peter-akhigbe)
+
+👤 **Author2**
+
+- GitHub: [@OnlyUnown](https://github.com/OnlyUnknown)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
