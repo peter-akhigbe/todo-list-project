@@ -294,7 +294,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "scripts": {
-    "test": "jest --watch",
+    "test": "jest --watch --coverage",
     "build": "webpack",
     "start": "webpack serve --open",
     "deploy": "gh-pages -d dist"
