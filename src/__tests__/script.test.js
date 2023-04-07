@@ -15,7 +15,7 @@ beforeEach(() => {
   todoListObj.allFuncs();
 });
 
-describe('testing "add" and "delete" from DOM and array', () => {
+describe('testing functions', () => {
   const addOnetask = () => {
     const input = document.querySelector('input');
     input.value = 'one';
@@ -23,7 +23,16 @@ describe('testing "add" and "delete" from DOM and array', () => {
     input.dispatchEvent(event);
   };
 
-  it('add', () => {
+  const deleteOneTask = () => {
+    const dotBtn = document.querySelector('#dot-1');
+    dotBtn.click();
+
+    const deleteBtn = document.querySelector('#delete-1');
+    deleteBtn.click();
+  };
+
+  test('add function', () => {
+    addOnetask();
     addOnetask();
 
     const listFromDom = [...document.querySelectorAll('.list')];
@@ -36,20 +45,22 @@ describe('testing "add" and "delete" from DOM and array', () => {
     };
 
     expect(arr[0]).toEqual(expectedObj);
-    expect(listFromDom.length).toEqual(1);
+    expect(listFromDom.length).toEqual(2);
   });
 
-  it('delete', () => {
+  test('delete function', () => {
+    addOnetask();
+    addOnetask();
+    addOnetask();
     addOnetask();
 
-    const dotBtn = document.querySelector('#dot-1');
-    dotBtn.click();
+    deleteOneTask();
+    deleteOneTask();
 
-    const deleteBtn = document.querySelector('#delete-1');
-    deleteBtn.click();
-
+    const listFromDom = document.querySelectorAll('.list');
     const arr = todoListObj.todoListArray;
 
-    expect(arr.length).toEqual(0);
+    expect(arr.length).toEqual(2);
+    expect(listFromDom.length).toEqual(2);
   });
 });
