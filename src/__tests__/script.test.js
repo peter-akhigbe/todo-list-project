@@ -16,6 +16,8 @@ beforeEach(() => {
 });
 
 describe('testing functions', () => {
+  //   these functions simulates DOM activiteis
+  //   starts here ----------------------------
   const addOnetask = () => {
     const input = document.querySelector('input');
     input.value = 'one';
@@ -31,6 +33,29 @@ describe('testing functions', () => {
     deleteBtn.click();
   };
 
+  const editOneTask = () => {
+    const editBtn = document.querySelector('#dot-1');
+    editBtn.click();
+
+    const input = document.querySelector('#edit-1');
+    input.value = 'edited';
+
+    const event = new KeyboardEvent('keypress', { key: 'Enter' });
+    input.dispatchEvent(event);
+  };
+
+  const clickFirstCheckbox = () => {
+    const checkbox = document.querySelector('#item-1');
+    checkbox.click();
+  };
+
+  const clickClearBtn = () => {
+    const clearBtn = document.querySelector('h2');
+    clearBtn.click();
+  };
+  //   ends here ----------------------------
+
+  //   testing the add function
   test('add function', () => {
     addOnetask();
     addOnetask();
@@ -48,19 +73,59 @@ describe('testing functions', () => {
     expect(listFromDom.length).toEqual(2);
   });
 
+  //   testing the delete function
   test('delete function', () => {
     addOnetask();
     addOnetask();
-    addOnetask();
-    addOnetask();
 
     deleteOneTask();
     deleteOneTask();
 
-    const listFromDom = document.querySelectorAll('.list');
+    const listFromDom = [...document.querySelectorAll('.list')];
     const arr = todoListObj.todoListArray;
 
-    expect(arr.length).toEqual(2);
-    expect(listFromDom.length).toEqual(2);
+    expect(arr.length).toEqual(0);
+    expect(listFromDom.length).toEqual(0);
+  });
+
+  //   testing the edit function
+  test('edit function', () => {
+    addOnetask();
+
+    editOneTask();
+
+    const arr = todoListObj.todoListArray;
+    const expectedObj = {
+      index: 1,
+      completed: false,
+      discription: 'edited',
+    };
+
+    expect(arr[0]).toEqual(expectedObj);
+  });
+
+  //   testing checkbox
+  test('checkbox', () => {
+    addOnetask();
+
+    clickFirstCheckbox();
+
+    const arr = todoListObj.todoListArray;
+
+    expect(arr[0].completed).toEqual(true);
+  });
+
+  //   testing clear all completed
+  test('clear all completed', () => {
+    addOnetask();
+    addOnetask();
+
+    clickFirstCheckbox();
+
+    clickClearBtn();
+
+    const arr = todoListObj.todoListArray;
+
+    expect(arr.length).toEqual(1);
   });
 });
